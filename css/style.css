@@ -1,0 +1,218 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+  }
+
+  
+.header {
+    width: 60%;
+    height: 1000px;
+    background-color: #000000;
+    z-index: 1000;
+
+}
+.header h1 {
+    font-family: "Antonio", system-ui;
+    font-optical-sizing: auto;
+    font-weight:700;
+    font-style: normal;
+    font-size: 7.8rem;
+    padding-left: 50px;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+.header h1 span {
+    color: #89bb3e;
+}
+
+.header h2 span {
+    color: aqua;
+}
+.header h2 {
+    font-family: 'popppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    color: #fff;
+    padding-left: 50px;
+}
+
+.ijo {
+    background-color: #89bb3e;
+    display: flex;
+    width: 40%;
+    height: 1000px;
+    right: 0;
+    position: absolute;
+}
+
+.header img {
+    background-image: url(img/logo.png);
+    width: 50px;
+    margin-bottom: 35px;
+    margin-left: 50px;
+}
+
+.gel {
+    z-index: 9999;
+    position: absolute;
+    top: 720px;
+}
+
+.intro {
+    background-color: #6fabca;
+    width: 100%;
+    display: flex;
+}
+
+
+.intro img {
+    background-image: url(img/10.jpg);
+    width: 500px;
+    height: 500px;
+    border-radius: 70px;
+    padding-left: 50px;
+    padding-top: 100px;
+    display: inline;
+}
+.intro h1 {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    display: inline-block;
+}
+
+.intro p {
+    font-family: 'popppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.text {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    padding-left: 150px;
+    padding-top: 90px;
+} 
+
+.text h1 {
+    padding-bottom: 50px;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 90%;
+    }
+    .kedip text {
+        transform: translateX(10%);
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    .gel {
+        top: 800px;
+    }
+    .text {
+        padding-left: 10px;
+    }
+}
+
+.kedip{
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+    transform: translate(-10%, -10%);
+    display: flex;
+  }
+  
+  
+.kedip text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    justify-content: center;
+    text-align: center;
+    transform: translate(30%, 70%);
+    font-size: 9rem;
+    margin-bottom: 30%;
+    stroke-width: 3px;
+    fill: transparent;
+    animation: anim 5s infinite alternate;
+  }
+  
+  @keyframes anim {
+    from {
+      stroke-dasharray: 0 70%;
+  
+    }
+    to {
+      stroke-dasharray: 10% 0;
+      stroke-dashoffset: 0;
+    }
+    20% {
+      stroke: #c1d1d3;
+    }
+  
+    65% {
+      stroke: #89bb3e;
+    }
+    100%{
+      stroke: #6fabca;
+    }
+  }
+
+
+.v {
+    transform: translateY(10%);
+}
+
+.foto {
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+    background-color: #c1d1d3;
+}
+
+.foto h1 {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    color: #000000;
+}
+
+.foto img {
+    transition: 3s ease;
+    width: 400px;
+    border-radius: 70px;
+    padding: 20px 50px;
+}
+
+.foto img:hover {
+    transform: scale(1.3);
+}
+
