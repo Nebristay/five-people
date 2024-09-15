@@ -111,32 +111,32 @@
 /* Media Queries */
 
 /* Laptop */
-@media (max-width: 1366px) {
+@media (min-width: 1366px) {
     html {
         font-size: 90%;
-    }
-    .kedip text {
-        transform: translateX(10%);
     }
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     html {
         font-size: 62.5%;
     }
 }
 
 /* Mobile */
-@media (max-width: 450px) {
+@media (min-width: 450px) {
     html {
         font-size: 55%;
     }
     .gel {
-        top: 800px;
+        top: 790px;
     }
     .text {
         padding-left: 10px;
+    }
+    .kedip text {
+        transform: translateX(10%);
     }
 }
 
