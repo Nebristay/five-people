@@ -18,3 +18,4 @@ function forgetPassword(){
     document.getElementById("signUp").style.top="450px"
     document.getElementById("signIn").style.top="450px"
 }
+

@@ -92,13 +92,13 @@
 
 .intro p {
     font-family: 'popppins', sans-serif;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
     font-size: 1.5rem;
     display: inline-block;
 }
 
-.text {
+.intro .text {
     width: 500px;
     height: 500px;
     text-align: center;
@@ -121,23 +121,26 @@
 /* Tablet */
 @media (min-width: 768px) {
     html {
-        font-size: 80%;
+        font-size: 90%;
     }
 }
 
 /* Mobile */
 @media (min-width: 450px) {
     html {
-        font-size: 70%;
+        font-size: 80%;
     }
     .gel {
         top: 790px;
     }
-    .text {
-        padding-left: 10px;
+    .intro .text {
+        padding-left: 50px;
     }
     .kedip text {
         transform: translateX(10%);
+    }
+    .sm img {
+      width: 90%;
     }
 }
 
@@ -230,7 +233,6 @@
     padding: 0;
     margin: 0 50px;
 }
-
 
 
 .box {

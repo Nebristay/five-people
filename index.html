@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
     <title>Website class</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -78,15 +80,19 @@
 
    <div class="box" id="box">
     <div class="form">
-        <form action="" id="signIn">
+      <div class="alert alert-success d-none alert-dismissible fade show" role="alert">
+        <strong>Terima Kasih!</strong> Pesan sudah Di Terima.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+        <form action="" id="signIn" name="Pesan">
             <h2>Kirim Pesan!!</h2>
             <div class="inputBox">
-                <input type="text" required="required">
+                <input type="text" required="required" name="Nama Pengirim">
                 <span>Nama</span>
                 <i></i>
             </div>
             <div class="inputBox">
-                <input type="text" required="required">
+                <input type="text" required="required" name="Isi Pesan">
                 <span>Pesan</span>
                 <i></i>
             </div>
@@ -98,8 +104,27 @@
 <br>
 <script src="script.js"></script>
 
-   <!-- pesan end -->
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyMtq58J8UeFhwZgoPpa96qEP8JaAEaQSsn37rLRavdykIPDCkoRERvn7Ib0koGPA/exec'
+  const form = document.forms['Pesan']
 
+  const myAlert = document.querySelector('.alert');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        // tampilkan alert
+        myAlert.classList.toggle('d-none')
+        // reset pesan
+        form.reset();
+        console.log('Success!', response)
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
 </body>
 </html>
